@@ -1,0 +1,73 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- Page title -->
+    <title>UDC | Projeto Base</title>
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="vendor/animate.css/animate.css"/>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css"/>
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="styles/pe-icons/pe-icon-7-stroke.css"/>
+    <link rel="stylesheet" href="styles/pe-icons/helper.css"/>
+    <link rel="stylesheet" href="styles/stroke-icons/style.css"/>
+    <link rel="stylesheet" href="styles/style.css">
+
+    @RenderSection("styles", required: false)
+
+</head>
+<body>
+
+    <!-- Wrapper-->
+    <div class="wrapper">
+
+        <!-- Header-->
+        <nav class="navbar navbar-expand-md navbar-default fixed-top">
+            <partial name="_TopNavigation" />
+        </nav>
+
+        <!-- Navigation-->
+        <aside class="navigation">
+             <partial name="_MainNavigation" />
+        </aside>
+
+        <!-- Main content-->
+        <section class="content">
+            <!-- Main content -->
+            <div class="container-fluid">
+                @RenderBody()
+            </div><!-- /.container-fluid -->
+            <!-- /.content -->
+        </section>
+
+    </div>
+    <!-- End wrapper-->
+
+    @RenderSection("scripts", required: false)
+
+    <!-- Vendor scripts -->
+    <script src="vendor/pacejs/pace.min.js"></script>
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- App scripts -->
+    <script src="scripts/luna.js"></script>
+
+</body>
+</html>

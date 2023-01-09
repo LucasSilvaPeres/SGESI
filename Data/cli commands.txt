@@ -1,0 +1,7 @@
+cd Data
+
+-Add migration
+sudo dotnet ef --startup-project ../Interface migrations add ****
+
+-Update Database
+sudo dotnet ef --startup-project ../Interface  database update
